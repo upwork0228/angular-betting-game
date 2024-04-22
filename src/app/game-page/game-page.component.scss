@@ -1,0 +1,147 @@
+.game-page-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: white;
+    height: calc(85vh - 100px);
+    border: 5px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 1px 1px white;
+    margin: 50px;
+}
+
+
+.create-game-container{
+    flex: 50%;
+    border-right: 5px solid black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.join-game-container{
+    flex: 50%;
+
+}
+.list-games-header{
+    height: 40px;
+    background-color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    text-shadow: #8C2022 2px 2px;
+    border-top-right-radius: 20px;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+
+}
+.list-games{
+    background-color: #E59400;
+    height: calc(100% - 50px);
+    border-bottom-right-radius: 15px;
+    width: 100%;
+}
+.games-list{
+height: 50px; 
+border-bottom: 4px dashed black; 
+// background-color: whi÷tesmoke; 
+width: 100%;
+color: black;
+}
+$outline-width: 6px;
+$shadow-width: 4px;
+
+$button-background: #92CD41;
+$sec-button-background: #76c442;
+$shadow-color:  #4AA52E;
+
+$alt-button-background: #F7D51D;
+$alt-sec-button-background: #F2C409;
+$alt-shadow-color:  #E59400;
+
+$reset-button-background: #E76E55;
+$reset-sec-button-background: #CE372B;
+$reset-shadow-color:  #8C2022;
+@font-face { 
+    font-family: gameFont; src: url("http://www.dafont.com/silkscreen.font");
+    }
+.eightbit-btn {
+    font-family: 'Courier New', Courier, monospace;
+    
+    background: $button-background;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
+    text-shadow: red 2px 2px;
+    text-decoration: none; 
+    color: black;
+    box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $shadow-color;
+
+    &:hover,
+    &:focus {
+        background: $sec-button-background;
+        box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $shadow-color;
+    }
+
+    &:active {
+        box-shadow: inset $shadow-width $shadow-width 0px 0px $shadow-color;
+    }
+
+    &:before,
+    &:after {
+    content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+    }
+
+    &:before {
+        top: -$outline-width;
+        left: 0;
+        border-top: $outline-width black solid;
+        border-bottom: $outline-width black solid;
+    }
+
+    &:after {
+        left: -$outline-width;
+        top: 0;
+        border-left: $outline-width black solid;
+        border-right: $outline-width black solid;
+    }
+
+    &--reset {
+        background: $reset-button-background;
+        box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $reset-shadow-color;
+
+        &:hover,
+        &:focus {
+            background: $reset-sec-button-background;
+            box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $reset-shadow-color;
+        }
+
+        &:active {
+            box-shadow: inset $shadow-width $shadow-width 0px 0px $reset-shadow-color;
+        }
+
+    }
+
+    &--proceed {
+        background: $alt-button-background;
+        box-shadow: inset (-$shadow-width) (-$shadow-width) 0px 0px $alt-shadow-color;
+
+        &:hover,
+        &:focus {
+            background: $alt-sec-button-background;
+            box-shadow: inset (-$shadow-width*1.5) (-$shadow-width*1.5) 0px 0px $alt-shadow-color;
+        }
+
+        &:active {
+            box-shadow: inset $shadow-width $shadow-width 0px 0px $alt-shadow-color;
+        }
+
+    }
+}
